@@ -39,6 +39,8 @@ jobs:
               git checkout ${branch} && \
               git reset --hard origin/${branch} && \
               git pull --rebase --no-edit && \
+              php artisan config:clear && \
+              php artisan route:clear && \
               php artisan migrate
           "
 
