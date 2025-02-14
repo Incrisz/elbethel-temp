@@ -10,8 +10,16 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'gender', 'adm_no', 'no_of_days_present', 'class',
-        'marks_obtainable', 'marks_obtained', 'average', 'position', 'teacher_comments'
+        'name',
+        'gender',
+        'adm_no',
+        'no_of_days_present',
+        'class',
+        'marks_obtainable',
+        'marks_obtained',
+        'average',
+        'position',
+        'teacher_comments'
     ];
 
     public function scores()

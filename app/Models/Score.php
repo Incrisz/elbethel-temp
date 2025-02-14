@@ -10,11 +10,18 @@ class Score extends Model
     use HasFactory;
 
     protected $fillable = [
-        'student_id', 'subject_id', 'CA1', 'CA2', 'CA3', 'exam',
-        'total_marks', 'grade', 'position_in_subject', 'class_average',
-        'lowest_in_class', 'highest_in_class'
+        'student_id',
+        'subject_id',
+        'ca1',
+        'ca2',
+        'ca3',
+        'exam',
+        'grade',
+        'position_in_subject',
+        'class_average',
+        'lowest_in_class',
+        'highest_in_class'
     ];
-
     public function student()
     {
         return $this->belongsTo(Student::class);
@@ -24,4 +31,6 @@ class Score extends Model
     {
         return $this->belongsTo(Subject::class);
     }
+
+
 }

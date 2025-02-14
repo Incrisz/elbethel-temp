@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('student_id')->constrained('students')->onDelete('cascade');
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
-            $table->integer('CA1');
-            $table->integer('CA2');
-            $table->integer('CA3');
+            $table->integer('ca1')->default(0); // or nullable()
+            $table->integer('ca2')->default(0);
+            $table->integer('ca3')->default(0);
             $table->integer('exam');
-            $table->integer('total_marks');
+            $table->integer('total_marks')->virtualAs('ca1 + ca2 + ca3 + exam');
             $table->string('grade');
             $table->integer('position_in_subject');
             $table->decimal('class_average', 5, 2);
