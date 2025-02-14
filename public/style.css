@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+body{
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+.table-one, .table-two, .table-three{
+    width: 100%;
+}
+
+.table-two th{
+    text-align: left;
+}
+.table-two td{
+    text-align: center;
+}
+
+.table-three .print{
+    width: 200px;
+}
+.table-three .four{
+    width: 100px;
+    text-align: center;
+}
+
+@media print {
+    #print-button {
+      display: none;
+    }
+  }
+  
