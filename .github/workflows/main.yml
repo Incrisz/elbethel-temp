@@ -38,7 +38,8 @@ jobs:
               git reset --hard HEAD && \
               git checkout ${branch} && \
               git reset --hard origin/${branch} && \
-              git pull --rebase --no-edit
+              git pull --rebase --no-edit && \
+              php artisan migrate
           "
 
           # Restart the Docker container
