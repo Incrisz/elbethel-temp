@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->enum('gender', ['Male', 'Female']);
+            $table->string('adm_no')->unique();
+            $table->integer('no_of_days_present');
+            $table->string('class');
+            $table->integer('marks_obtainable');
+            $table->integer('marks_obtained');
+            $table->decimal('average', 5, 2);
+            $table->integer('position');
+            $table->text('teacher_comments')->nullable();
             $table->timestamps();
         });
     }
