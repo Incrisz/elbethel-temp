@@ -67,7 +67,7 @@
 
         <table class="table-three" border="1px">
             <tr>
-                <td colspan="2"><b>Grading System:</b>70 += A - <br /> Distinction, 70-74 = B2, 65-69 = B3 <br />
+                <td colspan="2"><b>Grading System:</b>75 += A1(Distinction) <br />  70-74 = B2, 65-69 = B3 <br />
                 (Very Good), 60-64 = C4, 55-59 = C5, <br />
             50-54 = C6 (Credit), 45-49 = D7, 40-44 = E8(Pass), <br /> 0-39 = F9 (Fail)</td>
                 <td style="text-align: center;">Skills and Behaviour</td>
