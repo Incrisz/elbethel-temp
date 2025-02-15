@@ -83,6 +83,7 @@
                 <td style="text-align: center;">Skills and Behaviour</td>
                 <td colspan="3"><b>KEYS TO RATINGS:</b>Excellent = 5, <br /> Very Good = 4, Satisfactory = 3, Fair = 2, Poor = 1</td>
             </tr>
+            @if($student->skillsbehavior)
 
             <tr>
                 <td colspan="2"><b>Class Teacher Comments:</b>  {{ $student->teacher_comments }} </td>
@@ -153,6 +154,7 @@
                 <td>Self Control</td>
                 <td class="four">{{ $student->skillsbehavior->self_control }}</td>
             </tr>
+            @endif
         </table>
         <button id="print-button"  onclick="window.print()">Print</button>
         <button id="print-button" ><a href="{{ route('students.index') }}">Back</a></button>
