@@ -25,7 +25,7 @@
             <tr>
                 <td>Session:2024/2025</td>
                 <td>Term:First <br> Term</td>
-                <td>Reort Date:22nd, January <br> 2025</td>
+                <td>Report Date:22nd, January <br> 2025</td>
                 <td>No of Days <br> Present:{{ $student->no_of_days_present }}</td>
                 <td>No of Days <br> Absent:NIL</td>
                 <td>No in Class: {{ $student->no_in_class }}</td>
