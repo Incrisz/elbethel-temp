@@ -55,9 +55,23 @@ class StudentController extends Controller
     // Update student
     public function update(Request $request, Student $student) {
         $data = $request->validate([
-            'no_of_days_present' => 'integer',
-            'teacher_comments' => 'string'
+            'name' => 'required|string|max:255',
+            'gender' => 'required|in:male,female',
+            'adm_no' => 'required',
+            'no_of_days_present' => 'required|integer|min:0',
+            'class' => 'required|string|max:50',
+            'marks_obtainable' => 'required|integer|min:0',
+            'marks_obtained' => 'required|integer|min:0',
+            'average' => 'nullable|numeric',
+            'position' => 'nullable',
+            'teacher_comments' => 'nullable|string',
+            'no_in_class' => 'nullable'
         ]);
+        // dd("i got here");
+    // Calculate average if needed
+        if($data['marks_obtainable'] > 0) {
+            $data['average'] = ($data['marks_obtained'] / $data['marks_obtainable']) * 100;
+        }
 
         $student->update($data);
         return redirect()->route('students.index')->with('success', 'Student updated!');
