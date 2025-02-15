@@ -1,21 +1,24 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Subject')
-
 @section('content')
+<div class="container">
     <h2>Edit Subject</h2>
-    <form action="{{ route('subjects.update', $subject->id) }}" method="POST">
+    
+    <form action="{{ route('subjects.update', $subject) }}" method="POST">
         @csrf
         @method('PUT')
+        
         <div class="mb-3">
-            <label class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" value="{{ $subject->name }}" required>
+            <label for="name" class="form-label">Subject Name</label>
+            <input type="text" class="form-control" id="name" name="name" 
+                   value="{{ old('name', $subject->name) }}" required>
+            @error('name')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
         </div>
-        <!-- <div class="mb-3">
-            <label class="form-label">Description</label>
-            <textarea name="description" class="form-control">{{ $subject->description }}</textarea>
-        </div> -->
-        <button type="submit" class="btn btn-primary">Update</button>
-        <a href="{{ route('subjects.index') }}" class="btn btn-secondary">Back</a>
+        
+        <button type="submit" class="btn btn-primary">Update Subject</button>
+        <a href="{{ route('subjects.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
+</div>
 @endsection

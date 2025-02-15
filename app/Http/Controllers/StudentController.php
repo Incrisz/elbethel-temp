@@ -62,4 +62,6 @@ class StudentController extends Controller
         $student->update($data);
         return redirect()->route('students.index')->with('success', 'Student updated!');
     }
+
+    
 }

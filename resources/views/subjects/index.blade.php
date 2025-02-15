@@ -19,12 +19,17 @@
             @foreach($subjects as $subject)
                 <tr>
                     <td>{{ $subject->name }}</td>
+
                     <td>
-                        <form action="{{ route('subjects.destroy', $subject) }}" method="POST">
+                        <a href="{{ route('subjects.edit', $subject) }}" class="btn btn-sm btn-warning">Edit</a>
+                        <form action="{{ route('subjects.destroy', $subject) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            <button type="submit" class="btn btn-sm btn-danger" 
+                                    onclick="return confirm('Are you sure?')">Delete</button>
                         </form>
+                   
+                        
                     </td>
                 </tr>
             @endforeach

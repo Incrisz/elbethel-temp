@@ -47,8 +47,10 @@
                 <th>CLASS <br /> AVERAGE</th>
                 <th>LOWEST <br /> IN CLASS</th>
                 <th>HIGHEST <br /> IN CLASS</th>
+                <th id="print-button">EDIT</th>
             </tr>
             @foreach($student->scores as $score)
+            
                 <tr>
                     <th>{{ $score->subject->name }}</th>
                     <td>{{ $score->ca1 }}</td>
@@ -61,8 +63,16 @@
                     <td>{{ $score->class_average }}</td>
                     <td>{{ $score->lowest_in_class }}</td>
                     <td>{{ $score->highest_in_class }}</td>
+                        <!-- ... EDIT cells ... -->
+                        <td id="print-button">
+                            <a href="{{ route('scores.edit', [$student, $score]) }}" 
+                            class="btn btn-sm btn-warning">
+                                Edit
+                            </a>
+                        </td>
                 </tr>
             @endforeach
+ 
         </table>
 
         <table class="table-three" border="1px">
@@ -144,7 +154,7 @@
                 <td class="four">{{ $student->skillsbehavior->self_control }}</td>
             </tr>
         </table>
-        <button id="print-button" onclick="window.print()">Print</button>
+        <button id="print-button"  onclick="window.print()">Print</button>
         <button id="print-button" ><a href="{{ route('students.index') }}">Back</a></button>
 
     </div>

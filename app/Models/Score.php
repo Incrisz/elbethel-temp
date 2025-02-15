@@ -18,6 +18,7 @@ class Score extends Model
         'exam',
         'grade',
         'position_in_subject',
+        'total_marks',
         'class_average',
         'lowest_in_class',
         'highest_in_class'
