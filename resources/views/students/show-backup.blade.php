@@ -45,18 +45,18 @@
     <div class="skills-section mt-4">
         <h4>Skills & Behavior</h4>
         <div class="row">
-            @if($student->sb)
+            @if($student->skillsbehavior)
                 <div class="col-md-4">
-                    <p>Attentiveness: {{ $student->sb->attentiveness }}/5</p>
-                    <p>Perseverance: {{ $student->sb->perseverance }}/5</p>
+                    <p>Attentiveness: {{ $student->skillsbehavior->attentiveness }}/5</p>
+                    <p>Perseverance: {{ $student->skillsbehavior->perseverance }}/5</p>
                 </div>
                 <div class="col-md-4">
-                    <p>Communication: {{ $student->sb->communication_skills }}/5</p>
-                    <p>Handwriting: {{ $student->sb->handwriting }}/5</p>
+                    <p>Communication: {{ $student->skillsbehavior->communication_skills }}/5</p>
+                    <p>Handwriting: {{ $student->skillsbehavior->handwriting }}/5</p>
                 </div>
                 <div class="col-md-4">
-                    <p>Politeness: {{ $student->sb->politeness }}/5</p>
-                    <p>Self Control: {{ $student->sb->self_control }}/5</p>
+                    <p>Politeness: {{ $student->skillsbehavior->politeness }}/5</p>
+                    <p>Self Control: {{ $student->skillsbehavior->self_control }}/5</p>
                 </div>
             @endif
         </div>

@@ -19,7 +19,8 @@ class Student extends Model
         'marks_obtained',
         'average',
         'position',
-        'teacher_comments'
+        'teacher_comments',
+        'no_in_class'
     ];
 
     public function scores()

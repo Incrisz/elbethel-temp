@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('total_marks')->virtualAs('ca1 + ca2 + ca3 + exam');
             $table->string('grade');
             $table->integer('position_in_subject');
-            $table->decimal('class_average', 5, 2);
+            $table->integer('class_average');
             $table->integer('lowest_in_class');
             $table->integer('highest_in_class');
             $table->timestamps();

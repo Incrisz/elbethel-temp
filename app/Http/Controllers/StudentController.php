@@ -29,7 +29,8 @@ class StudentController extends Controller
             'marks_obtained' => 'required|integer|min:0',
             'average' => 'nullable|numeric',
             'position' => 'nullable',
-            'teacher_comments' => 'nullable|string'
+            'teacher_comments' => 'nullable|string',
+            'no_in_class' => 'nullable'
         ]);
         // dd("i got here");
     // Calculate average if needed

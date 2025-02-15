@@ -62,13 +62,16 @@
 
         <div class="col-md-4">
             <label>Position</label>
-            <input type="number" name="position" class="form-control" 
+            <input type="text" name="position" class="form-control" 
                 value="{{ old('position') }}">
         </div>
 
         <div class="mb-3">
             <label>Teacher Comments</label>
             <textarea name="teacher_comments" class="form-control">{{ old('teacher_comments') }}</textarea>
+        </div>  <div class="mb-3">
+            <label>No in Class</label>
+            <textarea name="No in Class" class="form-control">{{ old('no_in_class') }}</textarea>
         </div>
 
         <div class="mt-3">

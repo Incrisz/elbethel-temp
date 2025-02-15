@@ -18,7 +18,7 @@
             <tr>
                 <td><img src="{{ asset('logo.jpeg')}}" alt="logo" srcset=""></td>
                 <td  colspan="3">END OF TERM REPORT, next term <br /> begins:2025-01-06|Term End:2025-07-27</td>
-                <td  colspan="2">Admission No.:1196 <br /> Name:ISMAIL AHMAD SANI <br /> Gender:M Class:Jss 3 PROGRESS</td>
+                <td  colspan="2">Admission No.:{{ $student->adm_no }} <br /> Name:{{ $student->name }} <br /> Gender:{{ $student->gender }} Class:{{ $student->class }}</td>
                 <td rowspan="2"><img src="{{ asset('passport.jpeg')}}" width="120px" height="140px" alt=""></td>
             </tr>
 
@@ -26,9 +26,9 @@
                 <td>Session:2024/2025</td>
                 <td>Term:First <br> Term</td>
                 <td>Reort Date:22nd, January <br> 2025</td>
-                <td>No of Days <br> Present:126</td>
+                <td>No of Days <br> Present:{{ $student->no_of_days_present }}</td>
                 <td>No of Days <br> Absent:NIL</td>
-                <td>No in br Class: 30</td>
+                <td>No in Class: {{ $student->no_in_class }}</td>
 
             </tr>
             
@@ -48,203 +48,21 @@
                 <th>LOWEST <br /> IN CLASS</th>
                 <th>HIGHEST <br /> IN CLASS</th>
             </tr>
-
-            <tr>
-                <th>AGRICULTURAL <br /> SCIENCE</th>
-                <td>5</td>
-                <td>7</td>
-                <td>12</td>
-                <td>31</td>
-                <td>55</td>
-                <td>C5</td>
-                <td>8</td>
-                <td>43</td>
-                <td>0</td>
-                <td>89</td>
-            </tr>
-
-            <tr>
-                <th>BASIC SCIENCE</th>
-                <td>10</td>
-                <td>9</td>
-                <td>19</td>
-                <td>48</td>
-                <td>86</td>
-                <td>A1</td>
-                <td>2</td>
-                <td>53</td>
-                <td>0</td>
-                <td>90</td>
-            </tr>
-
-            <tr>
-                <th>BASIC TECHNOLOGY</th>
-                <td>10</td>
-                <td>9</td>
-                <td>19</td>
-                <td>48</td>
-                <td>86</td>
-                <td>A1</td>
-                <td>2</td>
-                <td>56</td>
-                <td>0</td>
-                <td>90</td>
-                
-            </tr>
-
-            <tr>
-                <th>BUSINESS STUDIES</th>
-                <td>3</td>
-                <td>2</td>
-                <td>13</td>
-                <td>38</td>
-                <td>56</td>
-                <td>C5</td>
-                <td>11</td>
-                <td>54</td>
-                <td>0</td>
-                <td>90</td>
-            </tr>
-
-            <tr>
-                <th>CIVIC EDUCATION</th>
-                <td>4</td>
-                <td>3</td>
-                <td>12</td>
-                <td>21</td>
-                <td>40</td>
-                <td>E8</td>
-                <td>10</td>
-                <td>39</td>
-                <td>0</td>
-                <td>82</td>
-            </tr>
-
-            <tr>
-                <th>COMPUTER STUDIES</th>
-                <td>8</td>
-                <td>8</td>
-                <td>15</td>
-                <td>24</td>
-                <td>55</td>
-                <td>C5</td>
-                <td>8</td>
-                <td>50</td>
-                <td>0</td>
-                <td>89</td>
-            </tr>
-
-            <tr>
-                <th>CULTURAL/CREATIVE <br /> ART</th>
-                <td>2</td>
-                <td>5</td>
-                <td>13</td>
-                <td>31</td>
-                <td>51</td>
-                <td>C6</td>
-                <td></td>
-                <td>42</td>
-                <td>0</td>
-                <td>83</td>
-            </tr>
-
-            <tr>
-                <th>ENGLISH <br /> LANGUAGE</th>
-                <td>6</td>
-                <td>4</td>
-                <td>3</td>
-                <td>27</td>
-                <td>0</td>
-                <td></td>
-                <td>10</td>
-                <td>7</td>
-                <td>0</td>
-                <td>45</td>
-            </tr>
-
-            <tr>
-                <th>HAUSA <br /> LANGUAGE</th>
-                <td>10</td>
-                <td>10</td>
-                <td>13</td>
-                <td>38</td>
-                <td>71</td>
-                <td>B2</td>
-                <td>11</td>
-                <td>63</td>
-                <td>0</td>
-                <td>90</td>
-            </tr>
-
-            <tr>
-                <th>HISTORY</th>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>45</td>
-                <td>0</td>
-                <td>F9</td>
-                <td>13</td>
-                <td>56</td>
-                <td>0</td>
-                <td>90</td>
-            </tr>
-
-            <tr>
-                <th>HOME ECONOMICS</th>
-                <td>10</td>
-                <td>5</td>
-                <td>11</td>
-                <td>31</td>
-                <td>57</td>
-                <td>C5</td>
-                <td>10</td>
-                <td>56</td>
-                <td>0</td>
-                <td>93</td>
-            </tr>
-
-            <tr>
-                <th>ISLAMIC RELIGIOUS <br /> STUDIES</th>
-                <td>8</td>
-                <td>10</td>
-                <td>13</td>
-                <td>33</td>
-                <td>64</td>
-                <td>C4</td>
-                <td>5</td>
-                <td>61</td>
-                <td>41</td>
-                <td>77</td>
-            </tr>
-
-            <tr>
-                <th>MATHEMATICS</th>
-                <td>0</td>
-                <td>1</td>
-                <td>13</td>
-                <td>18</td>
-                <td>32</td>
-                <td>F9</td>
-                <td>13</td>
-                <td>35</td>
-                <td>0</td>
-                <td>70</td>
-            </tr>
-
-            <tr>
-                <th>SOCIAL STUDIES</th>
-                <td>4</td>
-                <td>4</td>
-                <td>20</td>
-                <td>36</td>
-                <td>64</td>
-                <td>C4</td>
-                <td>8</td>
-                <td>60</td>
-                <td>0</td>
-                <td>92</td>
-            </tr>
+            @foreach($student->scores as $score)
+                <tr>
+                    <th>{{ $score->subject->name }}</th>
+                    <td>{{ $score->ca1 }}</td>
+                    <td>{{ $score->ca2 }}</td>
+                    <td>{{ $score->ca3 }}</td>
+                    <td>{{ $score->exam }}</td>
+                    <td>{{ $score->total_marks }}</td>
+                    <td>{{ $score->grade }}</td>
+                    <td>{{ $score->position_in_subject }}</td>
+                    <td>{{ $score->class_average }}</td>
+                    <td>{{ $score->lowest_in_class }}</td>
+                    <td>{{ $score->highest_in_class }}</td>
+                </tr>
+            @endforeach
         </table>
 
         <table class="table-three" border="1px">
@@ -257,9 +75,9 @@
             </tr>
 
             <tr>
-                <td colspan="2">Class Teacher Comments: HE IS A <br />HARD WORKING STUDENT. </td>
+                <td colspan="2"><b>Class Teacher Comments:</b>  {{ $student->teacher_comments }} </td>
                 <td>Attentiveness</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->attentiveness }}</td>
                 <td rowspan="10"><img src="{{ asset('Signature.jpg') }}"  alt="" srcset=""></td>
             </tr>
 
@@ -267,63 +85,63 @@
                 <td></td>
                 <td></td>
                 <td>Perseverance</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->perseverance }}</td>
             </tr>
 
             <tr>
                 <td class="print">Principal's Comment:</td>
                 <td></td>
                 <td>Promptness in completing work</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->promptness }}</td>
             </tr>
 
             <tr>
                 <td class="print"></td>
                 <td></td>
                 <td>Communication Skills</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->communication_skills }}</td>
             </tr>
 
             <tr>
                 <td class="print"></td>
                 <td></td>
                 <td>Handwriting</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->handwriting }}</td>
             </tr>
 
             <tr>
-                <td class="print">Marks <br /> Obtainable:1400</td>
+                <td class="print">Marks <br /> Obtainable:{{ $student->marks_obtainable }}</td>
                 <td></td>
                 <td>Punctuality</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->punctuality }}</td>
             </tr>
 
             <tr>
-                <td class="print">Marks Obtainable:40</td>
+                <td class="print">Marks Obtainable:{{ $student->marks_obtained }}</td>
                 <td></td>
                 <td>Neatness</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->neatness }}</td>
             </tr>
 
             <tr>
-                <td class="print">Average:2.86</td>
+                <td class="print">Average:{{ $student->average }}</td>
                 <td></td>
                 <td>Politeness</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->politeness }}</td>
             </tr>
 
             <tr>
-                <td class="print">Position: 9 Out Of 30</td>
+                <td class="print">Position: {{ $student->position }}</td>
                 <td></td>
                 <td>Honesty</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->honesty }}</td>
             </tr>
 
             <tr>
                 <td class="print"> </td>
                 <td></td>
                 <td>Self Control</td>
-                <td class="four">4</td>
+                <td class="four">{{ $student->skillsbehavior->self_control }}</td>
             </tr>
         </table>
         <button id="print-button" onclick="window.print()">Print</button>
