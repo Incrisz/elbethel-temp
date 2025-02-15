@@ -7,8 +7,22 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     // Show all students
-    public function index() {
-        $students = Student::with(['scores', 'skillsbehavior'])->get();
+    public function index(Request $request) {
+        
+        // $students = Student::with(['scores', 'skillsbehavior'])->get();
+        $query = Student::with(['scores', 'skillsbehavior']);
+
+        // Check if a search query exists
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query = $query->where('name', 'LIKE', "%{$search}%")
+                           ->orWhere('class', 'LIKE', "%{$search}%");
+        }
+    
+        // Execute the query
+        $students = $query->get();
+
+
         return view('students.index', compact('students'));
     }
 

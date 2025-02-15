@@ -6,6 +6,14 @@
         <a href="{{ route('students.create') }}" class="btn btn-primary">Add New Student</a>
     </div>
 
+    <form action="{{ route('students.index') }}" method="GET" class="mb-3">
+        <div class="input-group" style="width: 350px;">
+            <input type="text" name="search" class="form-control" placeholder="Search by Name or Class"
+                   value="{{ request('search') }}">
+            <button type="submit" class="btn btn-secondary">Search</button>
+        </div>
+    </form>
+
     <table class="table table-striped">
         <thead>
             <tr>
