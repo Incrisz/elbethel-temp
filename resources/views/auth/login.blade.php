@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="https://www.result.elbethelacademy.com/login">
+                    <form method="POST" action="d">
                         @csrf
 
                         <div class="row mb-3">
