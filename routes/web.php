@@ -7,16 +7,25 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\SbController;
 
-
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+Auth::routes();
 
-// Auth::routes();
+Route::middleware(['auth'])->group(function () {
 
-// Route::middleware(['auth'])->group(function () {
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -47,6 +56,4 @@ Route::resource('subjects', SubjectController::class)->except(['show', 'edit', '
 Route::get('/subjects/{subject}/edit', [SubjectController::class, 'edit'])->name('subjects.edit');
 Route::put('/subjects/{subject}', [SubjectController::class, 'update'])->name('subjects.update');
 
-// });
-
-
+});
