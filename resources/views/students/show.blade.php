@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="{{ asset('style.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('style.css') }}">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,10 @@
     <div class="table-data">
         <table class="table-one" border="1px">
             <tr>
-                <td><img src="{{ asset('logo.jpeg')}}" alt="logo" srcset=""></td>
+                <td><img src="{{ secure_asset('logo.jpeg')}}" alt="logo" srcset=""></td>
                 <td  colspan="3">END OF TERM REPORT, next term <br /> begins:2025-01-06|Term End:2025-07-27</td>
                 <td  colspan="2">Admission No.:{{ $student->adm_no }} <br /> Name:{{ $student->name }} <br /> Gender:{{ $student->gender }} Class:{{ $student->class }}</td>
-                <td rowspan="2"><img src="{{ asset('passport.jpeg')}}" width="120px" height="140px" alt=""></td>
+                <td rowspan="2"><img src="{{ secure_asset('passport.jpeg')}}" width="120px" height="140px" alt=""></td>
             </tr>
 
             <tr>
@@ -89,7 +89,7 @@
                 <td colspan="2"><b>Class Teacher Comments:</b>  {{ $student->teacher_comments }} </td>
                 <td>Attentiveness</td>
                 <td class="four">{{ $student->skillsbehavior->attentiveness }}</td>
-                <td rowspan="10"><img src="{{ asset('Signature.jpg') }}"  alt="" srcset=""></td>
+                <td rowspan="10"><img src="{{ secure_asset('Signature.jpg') }}"  alt="" srcset=""></td>
             </tr>
 
             <tr>

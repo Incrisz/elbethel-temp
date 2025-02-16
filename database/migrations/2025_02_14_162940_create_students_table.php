@@ -21,8 +21,8 @@ return new class extends Migration
             $table->integer('marks_obtainable');
             $table->integer('marks_obtained');
             $table->decimal('average', 5, 2);
-            $table->string('position');
-            $table->string('no_in_class');
+            $table->string('position')->nullable();
+            $table->string('no_in_class')->nullable();
             $table->text('teacher_comments')->nullable();
             $table->timestamps();
         });
