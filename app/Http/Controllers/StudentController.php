@@ -41,7 +41,7 @@ class StudentController extends Controller
             'class' => 'required|string|max:50',
             'marks_obtainable' => 'required|integer|min:0',
             'marks_obtained' => 'required|integer|min:0',
-            'average' => 'nullable|numeric',
+            'average' => 'nullable',
             'position' => 'nullable',
             'teacher_comments' => 'nullable|string',
             'no_in_class' => 'nullable'
@@ -76,7 +76,7 @@ class StudentController extends Controller
             'class' => 'required|string|max:50',
             'marks_obtainable' => 'required|integer|min:0',
             'marks_obtained' => 'required|integer|min:0',
-            'average' => 'nullable|numeric',
+            'average' => 'nullable',
             'position' => 'nullable',
             'teacher_comments' => 'nullable|string',
             'no_in_class' => 'nullable'
