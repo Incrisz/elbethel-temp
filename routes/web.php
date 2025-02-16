@@ -14,7 +14,7 @@ use App\Http\Controllers\SbController;
 // });
 
 
-Auth::routes();
+// Auth::routes();
 
 // Route::middleware(['auth'])->group(function () {
 
