@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in! Now click on Students or subject at the right top corner to get started') }}
                 </div>
             </div>
         </div>

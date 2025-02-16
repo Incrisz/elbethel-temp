@@ -9,10 +9,17 @@ use App\Http\Controllers\SbController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+
+Auth::routes();
+
+Route::middleware(['auth'])->group(function () {
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Students
 Route::resource('students', StudentController::class);
@@ -40,8 +47,6 @@ Route::resource('subjects', SubjectController::class)->except(['show', 'edit', '
 Route::get('/subjects/{subject}/edit', [SubjectController::class, 'edit'])->name('subjects.edit');
 Route::put('/subjects/{subject}', [SubjectController::class, 'update'])->name('subjects.update');
 
+});
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
