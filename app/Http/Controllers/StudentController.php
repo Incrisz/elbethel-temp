@@ -44,7 +44,10 @@ class StudentController extends Controller
             'average' => 'nullable',
             'position' => 'nullable',
             'teacher_comments' => 'nullable|string',
-            'no_in_class' => 'nullable'
+            'no_in_class' => 'nullable',
+            'principal_comments' => 'nullable',
+            'session' => 'nullable',
+            'term' => 'nullable'
         ]);
         // dd("i got here");
     // Calculate average if needed
@@ -79,7 +82,10 @@ class StudentController extends Controller
             'average' => 'nullable',
             'position' => 'nullable',
             'teacher_comments' => 'nullable|string',
-            'no_in_class' => 'nullable'
+            'no_in_class' => 'nullable',
+            'principal_comments' => 'nullable',
+            'session' => 'nullable',
+            'term' => 'nullable'
         ]);
         // dd("i got here");
     // Calculate average if needed

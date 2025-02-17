@@ -74,11 +74,25 @@
                 <input type="number" name="no_in_class" class="form-control" 
                     value="{{ old('no_in_class', $student->no_in_class) }}">
             </div>
+            <div class="col-md-4">
+                <label>Session</label>
+                <input type="text" name="session" class="form-control" 
+                    value="{{ old('session', $student->session) }}">
+            </div>
+            <div class="col-md-4">
+                <label>Term</label>
+                <input type="text" name="term" class="form-control" 
+                    value="{{ old('term', $student->term) }}">
+            </div>
         </div>
 
         <div class="mb-3">
             <label>Teacher Comments</label>
             <textarea name="teacher_comments" class="form-control">{{ old('teacher_comments', $student->teacher_comments) }}</textarea>
+        </div>
+        <div class="mb-3">
+            <label>Principal Comments</label>
+            <textarea name="principal_comments" class="form-control">{{ old('principal_comments', $student->principal_comments) }}</textarea>
         </div>
 
         <div class="mt-3">

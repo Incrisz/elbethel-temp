@@ -23,8 +23,8 @@
             </tr>
 
             <tr>
-                <td>Session:2024/2025</td>
-                <td>Term:First <br> Term</td>
+                <td>Session:{{ $student->session }}</td>
+                <td>Term:{{ $student->term }} <br> Term</td>
                 <td>Report Date:22nd, January <br> 2025</td>
                 <td>No of Days <br> Present:{{ $student->no_of_days_present }}</td>
                 <td>No of Days <br> Absent:NIL</td>
@@ -100,7 +100,7 @@
             </tr>
 
             <tr>
-                <td class="print">Principal's Comment:</td>
+                <td class="print">Principal's Comment: {{ $student->principal_comments }}</td>
                 <td></td>
                 <td>Promptness in completing work</td>
                 <td class="four">{{ $student->skillsbehavior->promptness }}</td>

@@ -20,7 +20,10 @@ class Student extends Model
         'average',
         'position',
         'teacher_comments',
-        'no_in_class'
+        'no_in_class',
+        'principal_comments',
+        'session',
+        'term'
     ];
 
     public function scores()

@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('position')->nullable();
             $table->string('no_in_class')->nullable();
             $table->text('teacher_comments')->nullable();
+            $table->text('principal_comments')->nullable();
+            $table->string('session')->nullable();
+            $table->string('term')->nullable();
             $table->timestamps();
         });
     }

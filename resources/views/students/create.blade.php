@@ -64,14 +64,31 @@
             <label>Position</label>
             <input type="text" name="position" class="form-control" 
                 value="{{ old('position') }}">
+        </div>    
+        
+        <div class="col-md-4">
+            <label>session</label>
+            <input type="text" name="session" class="form-control" 
+                value="{{ old('session') }}">
+        </div>
+
+        <div class="col-md-4">
+            <label>term</label>
+            <input type="text" name="term" class="form-control" 
+                value="{{ old('term') }}">
+        </div>
+        <div class="col-md-4">
+            <label>No in Class</label>
+            <input type="text" name="no_in_class" class="form-control" 
+                value="{{ old('no_in_class') }}">
         </div>
 
         <div class="mb-3">
             <label>Teacher Comments</label>
             <textarea name="teacher_comments" class="form-control">{{ old('teacher_comments') }}</textarea>
         </div>  <div class="mb-3">
-            <label>No in Class</label>
-            <textarea name="No in Class" class="form-control">{{ old('no_in_class') }}</textarea>
+            <label>Principal Comments</label>
+            <textarea name="principal_comments" class="form-control">{{ old('principal_comments') }}</textarea>
         </div>
 
         <div class="mt-3">
