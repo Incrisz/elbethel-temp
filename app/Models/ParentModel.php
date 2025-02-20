@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ParentModel extends Model
 {
     use HasFactory;
+    protected $table = 'parents';
+
     protected $primaryKey = 'parent_id';
 
     protected $fillable = [

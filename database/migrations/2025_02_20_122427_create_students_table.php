@@ -25,6 +25,8 @@ return new class extends Migration
             // You might include other fields like section, term, etc.
             $table->string('section')->nullable();
             $table->string('term')->nullable();
+            $table->timestamps();
+
         });
     }
 

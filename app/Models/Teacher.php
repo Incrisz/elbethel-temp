@@ -14,6 +14,8 @@ class Teacher extends Model
         'first_name',
         'last_name',
         'subject_specialty',
+        'email',
+        'phone'
     ];
 
     // Many-to-many relationship with classes.

@@ -29,6 +29,10 @@ return new class extends Migration
 
             $table->foreign('student_id')->references('student_id')->on('students')->onDelete('cascade');
             $table->foreign('subject_id')->references('subject_id')->on('subjects')->onDelete('cascade');
+            // In your assessments migration
+            $table->unsignedBigInteger('term_id')->nullable();
+            $table->foreign('term_id')->references('term_id')->on('terms')->onDelete('set null');
+
 
         });
     }
