@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subjects', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::create('classes', function (Blueprint $table) {
+            $table->bigIncrements('class_id');
+            $table->string('class_name');
+            $table->string('arm')->nullable();// e.g., "Science", "Arts"
+            $table->string('section')->nullable();// e.g., "Primary", "Secondary"
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('subjects');
+        Schema::dropIfExists('classes');
     }
 };

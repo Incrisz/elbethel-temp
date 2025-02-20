@@ -6,6 +6,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\SbController;
+use App\Http\Controllers\ClassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ use App\Http\Controllers\SbController;
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -56,4 +57,9 @@ Route::resource('subjects', SubjectController::class)->except(['show', 'edit', '
 Route::get('/subjects/{subject}/edit', [SubjectController::class, 'edit'])->name('subjects.edit');
 Route::put('/subjects/{subject}', [SubjectController::class, 'update'])->name('subjects.update');
 
-});
+// web.php
+Route::resource('classes', ClassController::class);
+// Route::post('/students/{student}/promote', [StudentController::class, 'promote'])->name('students.promote');
+// Route::post('/classes/{class}/bulk-promote', [ClassController::class, 'bulkPromote'])->name('classes.bulk-promote');
+
+// });

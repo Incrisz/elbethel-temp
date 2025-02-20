@@ -1,38 +1,54 @@
 <?php
 
 namespace App\Models;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'student_id';
 
     protected $fillable = [
-        'name',
-        'gender',
-        'adm_no',
-        'no_of_days_present',
-        'class',
-        'marks_obtainable',
-        'marks_obtained',
-        'average',
-        'position',
-        'teacher_comments',
-        'no_in_class',
-        'principal_comments',
-        'session',
-        'term'
+        'first_name',
+        'last_name',
+        'other_name',
+        'date_of_birth',
+        'address',
+        'profile_picture',
+        'class_id',
+        'section',
+        'term',
     ];
 
-    public function scores()
+    // Each student belongs to one class.
+    public function schoolClass()
     {
-        return $this->hasMany(Score::class);
+        return $this->belongsTo(SchoolClass::class, 'class_id');
     }
 
-    public function skillsBehavior()
+    // Many-to-many relationship with parents.
+    public function parents()
     {
-        return $this->hasOne(SkillBehavior::class);
+        return $this->belongsToMany(ParentModel::class, 'parent_student', 'student_id', 'parent_id');
+    }
+
+    // One-to-many relationship with assessments.
+    public function assessments()
+    {
+        return $this->hasMany(Assessment::class, 'student_id');
+    }
+
+    // One-to-one relationship with skill behaviour.
+    public function skillBehaviour()
+    {
+        return $this->hasOne(SkillBehaviour::class, 'student_id');
+    }
+
+    // One-to-many relationship with attendance records.
+    public function attendance()
+    {
+        return $this->hasMany(Attendance::class, 'student_id');
     }
 }

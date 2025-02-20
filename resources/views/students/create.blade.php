@@ -35,11 +35,16 @@
                 <input type="text" name="adm_no" class="form-control" value="{{ old('adm_no') }}" required>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-mb-4">
                 <label>Class</label>
-                <input type="text" name="class" class="form-control" value="{{ old('class') }}" required>
+                <select name="class_id" class="form-select" required>
+                    @foreach(App\Models\ClassModel::all() as $class)
+                        <option value="{{ $class->id }}" {{ old('class_id', $student->class_id) == $class->id ? 'selected' : '' }}>
+                            {{ $class->name }} {{ $class->arm }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
-        </div>
 
         <div class="row mt-3">
             <div class="col-md-6">

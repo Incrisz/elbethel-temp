@@ -97,5 +97,26 @@ class StudentController extends Controller
         return redirect()->route('students.index')->with('success', 'Student updated!');
     }
 
+        // Add to StudentController
+    public function promote(Student $student)
+    {
+        if (!$student->class->nextClass) {
+            return redirect()->back()->with('error', 'No next class defined for promotion');
+        }
+
+        $student->update(['class_id' => $student->class->next_class_id]);
+        return redirect()->back()->with('success', 'Student promoted successfully!');
+    }
+
+    public function bulkPromote(ClassModel $class)
+    {
+        if (!$class->nextClass) {
+            return redirect()->back()->with('error', 'No next class defined for promotion');
+        }
+
+        $class->students()->update(['class_id' => $class->next_class_id]);
+        return redirect()->back()->with('success', 'All students promoted successfully!');
+    }
+
     
 }
